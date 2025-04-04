@@ -3,7 +3,6 @@ import { LanguageContext } from '../../context/LanguageContext';
 import axios from 'axios';
 
 // This component displays the original invoice image
-// Note: For this to work, your backend needs to expose an endpoint that serves the invoice file data
 const InvoiceImage = ({ invoiceId, filename }) => {
   const { t } = useContext(LanguageContext);
   const [imageSrc, setImageSrc] = useState(null);
@@ -19,8 +18,6 @@ const InvoiceImage = ({ invoiceId, filename }) => {
         setLoading(true);
         
         // We need to create a custom endpoint to get the file data directly
-        // Since the provided API doesn't have this explicitly, we'll use our own
-        // You'll need to implement this endpoint in your API
         const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
         const response = await axios.get(`${API_BASE_URL}/invoices/${invoiceId}/file`, {
           responseType: 'arraybuffer'
@@ -35,7 +32,6 @@ const InvoiceImage = ({ invoiceId, filename }) => {
         // Set the image src based on file type
         if (isPdf) {
           // For PDFs, we need to use a PDF viewer or convert to image on the server
-          // This is a placeholder for PDF handling
           setImageSrc(`data:application/pdf;base64,${base64}`);
         } else {
           // For images, we can display directly
@@ -105,7 +101,7 @@ const InvoiceImage = ({ invoiceId, filename }) => {
   }
 
   return (
-    <div className="card p-2">
+    <div className="card p-2 invoice-image-container">
       {isPdf ? (
         <div className="text-center">
           <p className="mb-2">PDF Document</p>
@@ -113,16 +109,18 @@ const InvoiceImage = ({ invoiceId, filename }) => {
             src={imageSrc}
             title="PDF Document"
             width="100%"
-            height="500px"
+            height="600px"
             className="border-0"
           />
         </div>
       ) : (
-        <img
-          src={imageSrc}
-          alt="Invoice"
-          className="max-w-full h-auto"
-        />
+        <div className="image-wrapper">
+          <img
+            src={imageSrc}
+            alt="Invoice"
+            className="invoice-image"
+          />
+        </div>
       )}
     </div>
   );

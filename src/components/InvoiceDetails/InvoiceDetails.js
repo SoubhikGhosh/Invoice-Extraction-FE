@@ -84,8 +84,8 @@ const InvoiceDetails = () => {
   return (
     <div>
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold">{t('invoice.details.title')}</h1>
-        <div className="flex gap-2">
+        <h1 className="text-2xl font-bold invoice-title">{t('invoice.details.title')}</h1>
+      <div className="flex gap-2">
           <Link to="/invoices" className="btn btn-secondary">
             {t('invoice.details.backToList')}
           </Link>

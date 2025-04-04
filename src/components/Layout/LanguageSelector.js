@@ -6,8 +6,10 @@ const LanguageSelector = () => {
 
   const languageNames = {
     en: 'English',
-    es: 'Español'
-    // Add more languages as needed
+    es: 'Español',
+    hi: 'हिन्दी',
+    bn: 'বাংলা',
+    ja: '日本語'
   };
 
   const handleChange = (e) => {

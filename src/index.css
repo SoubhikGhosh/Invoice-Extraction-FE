@@ -13,22 +13,24 @@
   --warning-color: #ff9800;
   --error-color: #f44336;
   --info-color: #2196f3;
+  --primary-color-rgb: 67, 97, 238;
 }
 
 /* Dark theme colors */
 body.dark-theme {
-  --primary-color: #7289da;
-  --secondary-color: #5865f2;
+  --primary-color: #a289ff;
+  --secondary-color: #7d6fd3;
   --background-color: #202124;
   --surface-color: #292b2f;
   --border-color: #40444b;
-  --text-primary: #e6e6e6;
-  --text-secondary: #a8a8a8;
-  --text-muted: #727272;
-  --success-color: #43a047;
-  --warning-color: #ffa000;
-  --error-color: #e53935;
-  --info-color: #1e88e5;
+  --text-primary: #ffffff;
+  --text-secondary: #c0c0c0;
+  --text-muted: #a0a0a0;
+  --success-color: #66bb6a;
+  --warning-color: #ffa726;
+  --error-color: #ef5350;
+  --info-color: #42a5f5;
+  --primary-color-rgb: 162, 137, 255;
 }
 
 /* Basic resets */
@@ -386,7 +388,7 @@ code {
 .dropzone:hover, 
 .dropzone.active {
   border-color: var(--primary-color);
-  background-color: rgba(67, 97, 238, 0.05);
+  background-color: rgba(var(--primary-color-rgb), 0.05);
 }
 
 /* Loading spinner */
@@ -577,4 +579,93 @@ code {
 
 .field-value {
   width: 60%;
+}
+
+/* Additional styling for invoice image display */
+.invoice-image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 600px;
+  overflow: auto;
+}
+
+.invoice-image {
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+
+/* Add some margin to language selector */
+select.form-control {
+  margin-left: 8px;
+  padding: 4px 8px;
+}
+
+/* Improve PDF display in dark mode */
+body.dark-theme iframe {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/* Make dropzone more prominent */
+.dropzone:hover, 
+.dropzone.active {
+  border-color: var(--primary-color);
+  background-color: rgba(var(--primary-color-rgb), 0.05);
+}
+
+/* Ensure heading text is highly visible in dark mode */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme .dashboard-title,
+body.dark-theme .text-2xl {
+  color: #ffffff !important;
+}
+
+/* Specifically style the page titles for dark mode */
+body.dark-theme .invoice-title,
+body.dark-theme .dashboard-title {
+  color: var(--primary-color) !important;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Improve navigation visibility in dark mode */
+body.dark-theme .nav-link {
+  color: #d0d0d0;
+}
+
+body.dark-theme .nav-link:hover,
+body.dark-theme .nav-link.active {
+  color: var(--primary-color);
+}
+
+/* Fix spinner in dark mode */
+body.dark-theme .spinner {
+  border-color: rgba(255, 255, 255, 0.1);
+  border-top-color: var(--primary-color);
+}
+
+/* Ensure table headers are readable */
+body.dark-theme .table th {
+  color: #ffffff;
+}
+
+/* Enhance card contrast in dark mode */
+body.dark-theme .card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Make app title more prominent */
+body.dark-theme .app-title {
+  color: var(--primary-color);
+  font-weight: 700;
 }

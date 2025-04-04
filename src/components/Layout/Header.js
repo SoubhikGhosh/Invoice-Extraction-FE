@@ -33,9 +33,9 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold">
-            {t('app.title')}
-          </Link>
+        <Link to="/" className="text-xl font-bold app-title">
+          {t('app.title')}
+        </Link>
           
           <nav>
             <ul className="nav-list">
