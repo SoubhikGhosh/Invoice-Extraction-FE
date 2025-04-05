@@ -123,7 +123,7 @@ const InvoiceDetails = () => {
       <div className="grid grid-cols-2 gap-4">
         {/* Left column - Original Image */}
         <div>
-          <h2 className="text-xl mb-4">Original Invoice</h2>
+          <h2 className="text-xl mb-4">{t('invoice.details.labelOriginal')}</h2>
           <InvoiceImage invoiceId={invoice.id} filename={invoice.filename} />
         </div>
         

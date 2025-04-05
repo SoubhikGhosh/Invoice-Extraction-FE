@@ -53,6 +53,7 @@ export const translations = {
     'invoice.details.field.label': 'Field',
     'invoice.details.field.value': 'Value',
     'invoice.details.field.confidence': 'Confidence',
+    'invoice.details.labelOriginal': 'Original Invoice',
     
     // Dashboard
     'dashboard.title': 'System Dashboard',
@@ -134,6 +135,7 @@ export const translations = {
     'invoice.details.field.label': 'Campo',
     'invoice.details.field.value': 'Valor',
     'invoice.details.field.confidence': 'Confianza',
+    'invoice.details.labelOriginal': 'Factura Original',
     
     // Dashboard
     'dashboard.title': 'Panel del Sistema',
@@ -215,6 +217,7 @@ export const translations = {
     'invoice.details.field.label': 'फील्ड',
     'invoice.details.field.value': 'मान',
     'invoice.details.field.confidence': 'विश्वास स्तर',
+    'invoice.details.labelOriginal': 'मूल इनवॉइस',
     
     // Dashboard
     'dashboard.title': 'सिस्टम डैशबोर्ड',
@@ -296,6 +299,7 @@ export const translations = {
     'invoice.details.field.label': 'ফিল্ড',
     'invoice.details.field.value': 'মান',
     'invoice.details.field.confidence': 'বিশ্বাসযোগ্যতা',
+    'invoice.details.labelOriginal': 'মূল ইনভয়েস',
     
     // Dashboard
     'dashboard.title': 'সিস্টেম ড্যাশবোর্ড',
@@ -377,6 +381,7 @@ export const translations = {
     'invoice.details.field.label': 'フィールド',
     'invoice.details.field.value': '値',
     'invoice.details.field.confidence': '信頼度',
+    'invoice.details.labelOriginal': '元の請求書',
     
     // Dashboard
     'dashboard.title': 'システムダッシュボード',
@@ -403,4 +408,4 @@ export const translations = {
     'health.healthy': '正常',
     'health.unhealthy': '異常'
   }
-}
+};
